@@ -4,6 +4,8 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 .home-container {
   position: relative;
@@ -11,15 +13,21 @@
   flex-direction: column;
   transform: translate(-50%, -50%);
   min-height: 90vh;
+  max-height: 80vh;
   top: 55%;
   left: 25%;
   width: 50%;
   justify-content: space-around;
+  margin-bottom: 200px;
+  margin-top: 200px;
 }
 
 .Access-link,
 .Weights-link,
 .Calis-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   background: black;
   background-clip: text;
@@ -28,11 +36,10 @@
   position: relative;
   width: 50vw;
   height: 150px;
-  text-align: center;
-  justify-content: center;
   border: 1px solid black;
   border-radius: 12px;
 }
+
 a {
   text-decoration: none;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Nav.css";
+
 function Nav() {
   const navStyle = {
     color: "white",
@@ -10,7 +10,7 @@ function Nav() {
   return (
     <nav>
       <ul className="nav-link">
-        <Link to="/" style={navStyle}>
+        <Link className="home" to="/" style={navStyle}>
           <li>Home</li>
         </Link>
         <Link to="/account" style={navStyle}>

@@ -1,0 +1,13 @@
+footer {
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: bolder;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.733) 10%, rgb(0, 0, 0));
+  height: 8vh;
+  position: sticky;
+}
