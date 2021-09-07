@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.home-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+  min-height: 90vh;
+  top: 55%;
+  left: 25%;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.Access-link,
+.Weights-link,
+.Calis-link {
+  text-transform: uppercase;
+  background: black;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: auto;
+  position: relative;
+  width: 50vw;
+  height: 150px;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+a {
+  text-decoration: none;
+}
+.Access-link:hover,
+.Calis-link:hover,
+.Weights-link:hover {
+  cursor: pointer;
+}
