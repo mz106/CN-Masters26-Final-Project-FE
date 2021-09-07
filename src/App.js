@@ -3,6 +3,9 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Account from "./components/Account";
+import Weights from "./components/ProductPages/Weights";
+import Accessories from "./components/ProductPages/Accessories";
+import Calisthenics from "./components/ProductPages/Calisthenics";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
@@ -17,6 +20,9 @@ function App() {
             <Route path="/account" exact component={Account} />
             <Route path="/login" exact component={Login} />
             <Route path="/signup" exact component={Signup} />
+            <Route path="/weights" exact component={Weights} />
+            <Route path="/accessories" exact component={Accessories} />
+            <Route path="/calisthenics" exact component={Calisthenics} />
           </Switch>
         </div>
       </Router>
