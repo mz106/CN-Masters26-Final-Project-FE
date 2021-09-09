@@ -1,12 +1,28 @@
-import React from "react";
-import Registercard from "./RegisterCard";
+import React, { useState } from "react";
+import "./Register.css";
+import RegisterCard from "./RegisterCard";
+import RegisterSuccess from "./RegisterSuccess";
 
-function Signup() {
+const Signup = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  function submitForm() {
+    setIsSubmitted(true);
+  }
   return (
-    <div className="register-Content">
-      <Registercard />
-    </div>
+    <>
+      <div className="register-Container">
+        <div className="form-content-left">
+          <div className="form-img" />
+        </div>
+        {!isSubmitted ? (
+          <RegisterCard submitForm={submitForm} />
+        ) : (
+          <RegisterSuccess />
+        )}
+      </div>
+    </>
   );
-}
+};
 
 export default Signup;
