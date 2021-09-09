@@ -1,7 +1,12 @@
 import React from "react";
+import CardContainer from "./CardContainer";
 
 function Weights() {
-  return <div>Weights</div>;
+  return (
+    <>
+      <CardContainer />
+    </>
+  );
 }
 
 export default Weights;
