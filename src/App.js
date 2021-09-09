@@ -1,7 +1,7 @@
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Login from "./components/Login";
-import Signup from "./components/Signup";
+import Signup from "./components/Register/Signup";
 import Account from "./components/Account";
 import Weights from "./components/ProductPages/Weights";
 import Accessories from "./components/ProductPages/Accessories";
@@ -26,7 +26,7 @@ function App() {
             <Route path="/calisthenics" exact component={Calisthenics} />
           </Switch>
         </div>
-        <Footer/>
+        <Footer />
       </Router>
     </>
   );

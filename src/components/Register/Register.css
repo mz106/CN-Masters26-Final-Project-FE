@@ -1,0 +1,10 @@
+.register-Content {
+  z-index: 2;
+  width: 1200px;
+  box-shadow: 0 5px 10px 0 rgba(83, 83, 83, 0.315), 0 7px 10px 0 rgb(97, 97, 97);
+  position: relative;
+  border-radius: 10px;
+  height: 60vh;
+  display: flex;
+  background-color: white;
+}
