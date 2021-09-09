@@ -1,7 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import CardContainer from "./CardContainer";
 
 function Weights() {
+
   return (
     <>
       <CardContainer />
