@@ -30,21 +30,49 @@
   align-items: center;
   text-transform: uppercase;
   background: black;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin: auto;
   position: relative;
-  width: 50vw;
+  width: 40vw;
   height: 150px;
-  border: 1px solid black;
+  box-shadow: 0 0 22px black;
   border-radius: 12px;
+  text-shadow: 0 0 30px black;
+  -webkit-text-stroke: black solid 1px;
+}
+.Access-link {
+  background-image: url(./images/accessories.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Weights-link {
+  background-image: url(./images/weights.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Calis-link {
+  background-image: url(./images/calis.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 a {
   text-decoration: none;
+  text-shadow: 0 0 30px black;
+  -webkit-text-stroke: black solid 1px;
 }
 .Access-link:hover,
 .Calis-link:hover,
 .Weights-link:hover {
   cursor: pointer;
+  filter: brightness(0.8);
+}
+
+.filter-title {
+  color: rgb(255, 255, 255);
+  font-size: 42px;
+  font-weight: 700;
+  text-shadow: 0 0 32px black;
 }

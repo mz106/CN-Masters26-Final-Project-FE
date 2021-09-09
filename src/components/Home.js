@@ -6,13 +6,19 @@ const Home = () => {
     <>
       <div className="home-container">
         <Link to="/weights">
-          <div className="Weights-link">weights</div>
+          <div className="Weights-link">
+            <h1 className="filter-title">Weights</h1>
+          </div>
         </Link>
         <Link to="/calisthenics">
-          <div className="Calis-link">Calisthenics</div>
+          <div className="Calis-link">
+            <h1 className="filter-title">Calisthenics</h1>
+          </div>
         </Link>
         <Link to="/accessories">
-          <div className="Access-link">Accessories</div>
+          <div className="Access-link">
+            <h1 className="filter-title">Accessories</h1>
+          </div>
         </Link>
       </div>
     </>
