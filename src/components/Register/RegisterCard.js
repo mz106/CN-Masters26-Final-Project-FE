@@ -17,14 +17,14 @@ const RegisterSignup = ({ submitForm }) => {
         password: values.password,
       });
 
-      //   const res = await fetch("http://localhost/user/register", {
-      //     mode: "cors",
-      //     method: "post",
-      //     headers: { "Content-Type": "application/json" },
-      //     body: obj,
-      //   });
-      //   const data = await res.json();
-      //   console.log({ data });
+      const res = await fetch("http://localhost/user/register", {
+        mode: "cors",
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: obj,
+      });
+      const data = await res.json();
+      console.log({ data });
     } catch (error) {
       console.error(error);
     }
