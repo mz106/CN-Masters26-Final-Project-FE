@@ -8,11 +8,13 @@ function Nav (){
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const [navbar, setNavbar]= useState(false)
-  const navStyle ={
-    color: "white",
-    textDecoration: "none",
-    listStyleType: "none",
-  };
+  // const navStyle = {
+  //   color: "white",
+  //   textDecoration: "none",
+  //   listStyleType: "none",
+  //   textTransform: "uppercase",
+  //   marginRight: "12em",
+  // };
 
   const changeNavbar =()=>{
     if (window.scrollY >=80){
@@ -36,22 +38,22 @@ function Nav (){
          </div>      
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li className = 'nav-item'>
-        <Link  style={navStyle} to="/"  >
+        <Link  className='nav-links' to="/"  >
           Home
         </Link>
         </li>
         <li className = 'nav-item'>
-        <Link  style={navStyle} to="/account" >
+        <Link  className='nav-links'  to="/account" >
           Account
         </Link>
         </li>
         <li className = 'nav-item'>
-        <Link  style={navStyle} to="/signup" >
+        <Link className='nav-links'   to="/signup" >
           Sign up
         </Link>
         </li>
         <li className = 'nav-item'>
-        <Link  style={navStyle}  to="/login">
+        <Link className='nav-links'  to="/login">
           LOG IN
         </Link>
         </li>
