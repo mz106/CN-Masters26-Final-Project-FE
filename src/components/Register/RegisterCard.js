@@ -34,7 +34,7 @@ const RegisterSignup = ({ submitForm }) => {
       <form onSubmit={handleSubmit} className="form" noValidate>
         <h1>
           Get started with us today! Create your free{" "}
-          <span className="CompanyName">Tm3</span> account by filling out the
+          <span className="CompanyName">Tm3</span> Cart by filling out the
           information below.
         </h1>
         <div className="register-inputs">
@@ -78,7 +78,7 @@ const RegisterSignup = ({ submitForm }) => {
           Sign up
         </button>
         <span className="register-input-login">
-          Already have an account? <Link to="/login">LOGIN HERE </Link>
+          Already have an Cart? <Link to="/login">LOGIN HERE </Link>
         </span>
       </form>
     </div>
