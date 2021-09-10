@@ -8,7 +8,6 @@ import Accessories from "./components/ProductPages/Accessories";
 import Calisthenics from "./components/ProductPages/Calisthenics";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
           <Route path="/calisthenics" exact component={Calisthenics} />
         </Switch>
       </div>
-      <Footer />
     </Router>
   );
 }
