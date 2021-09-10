@@ -1,42 +1,49 @@
-import React from 'react'
-import { Component } from 'react';
+import React,{useState} from 'react'
 import { Link } from "react-router-dom";
 import "./Nav.css";
 
-const navStyle ={
-  color: "white",
-  textDecoration: "none",
-  listStyleType: "none",
-};
 
-class Nav extends Component{
-  state = {clicked: false}
-
- handleClick = () => {
-        this.setState({clicked: !this.state.clicked})
-    }
-  render(){
-  return (
-    <nav className="NavbarItems">
-      <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-                </div>      
-      <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-        <Link style={navStyle} to="/"  >
-          <li>Home</li>
+function Nav (){
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  const navStyle ={
+    color: "white",
+    textDecoration: "none",
+    listStyleType: "none",
+  };
+    return (
+    <>
+    <nav className="Navbar">
+      <div className='navbar-container'>
+      <div className="menu-icon" onClick={handleClick}>
+        <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
+         </div>      
+      <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        <li className = 'nav-item'>
+        <Link  style={navStyle} to="/"  >
+          Home
         </Link>
-        <Link style={navStyle} to="/account" >
-          <li>Account</li>
+        </li>
+        <li className = 'nav-item'>
+        <Link  style={navStyle} to="/account" >
+          Account
         </Link>
-        <Link style={navStyle} to="/signup" >
-          <li>Sign up</li>
+        </li>
+        <li className = 'nav-item'>
+        <Link  style={navStyle} to="/signup" >
+          Sign up
         </Link>
-        <Link  style={navStyle} to="/login">
-          <li>LOG IN</li>
+        </li>
+        <li className = 'nav-item'>
+        <Link  style={navStyle}  to="/login">
+          LOG IN
         </Link>
+        </li>
       </ul>
+      </div>
     </nav>
+    </>
   );
-}}
+}
 
 export default Nav;
