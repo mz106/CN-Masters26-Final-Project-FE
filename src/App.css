@@ -56,3 +56,7 @@ footer {
   height: 8vh;
   position: sticky;
 }
+
+p {
+  color: black;
+}

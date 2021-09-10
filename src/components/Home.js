@@ -4,6 +4,7 @@ import "./Home.css";
 
 const Home = () => {
 
+  const [products, setProducts] = useState([]);
   const [values, setValues] = useState({
     name: "",
     catagory: "",
@@ -14,36 +15,44 @@ const Home = () => {
 
   });
 
-  const fetchProducts = async (event) => {
-    try {
-      const obj = JSON.stringify([{
-        name: values.name,
-        catagory: values.catagory,
-        weight: values.weight,
-        size: values.size,
-        price: values.price,
-        url: values.url
-      }]);
-      console.log(obj)
-      const res = await fetch("http://localhost/admin", {
-        mode: "cors",
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        body: obj,
-      });
-      console.log(res)
-      const data = await res.json();
-      console.log( data );
-    } catch (error) {
-      console.error(error);
-    }
-    console.log("fetchProducts end")
-  };
+  // const fetchProducts = async (event) => {
+  //   try {
+  //     const obj = JSON.stringify([{
+  //       name: values.name,
+  //       catagory: values.catagory,
+  //       weight: values.weight,
+  //       size: values.size,
+  //       price: values.price,
+  //       url: values.url
+  //     }]);
+      
+  //     const res = await fetch("http://localhost/admin/getproducts", {
+  //       mode: "cors",
+  //       method: "post",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: obj,
+  //     });
+      
+  //     const data = await res.json();
+  //     setProducts(data);
+      
+  //     for (let product of data) {
+  //       console.log(product.name)
+  //     }
+      
+      
+      
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  //   console.log("fetchProducts end")
+    
+  // };
   return (
     <>
       <div className="home-container">
         <Link to="/weights">
-          <div className="Weights-link" onClick={fetchProducts}>
+          <div className="Weights-link">
             <h1 className="filter-title">Weights</h1>
           </div>
         </Link>
@@ -58,6 +67,7 @@ const Home = () => {
           </div>
         </Link>
       </div>
+     
     </>
   );
 };
