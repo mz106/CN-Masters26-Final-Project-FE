@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+
 const Home = () => {
 
   const [values, setValues] = useState({
@@ -8,7 +9,7 @@ const Home = () => {
     catagory: "",
     weight: "",
     size: "",
-    price: "",
+    price: 0,
     url: ""
 
   });
@@ -24,14 +25,15 @@ const Home = () => {
         url: values.url
       });
       console.log(obj)
-      const res = await fetch("http://localhost/admin", {
+      const res = await fetch("http://localhost:80/http://localhost/admin", {
         mode: "cors",
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: obj,
       });
+      console.log(res)
       const data = await res.json();
-      console.log({ data });
+      console.log( data );
     } catch (error) {
       console.error(error);
     }
