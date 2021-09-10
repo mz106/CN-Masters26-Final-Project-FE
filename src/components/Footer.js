@@ -1,23 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Footer.css";
-const Footer = () => {
-  const footerStyle = {
-    color: "white",
-    textDecoration: "none",
-  };
+import React from 'react';
+import './Footer.css';
+
+function Footer() {
   return (
-    <footer>
-      <ul className="nav-links">
-        <Link style={footerStyle} to="/about">
-          <li className="footers">ABOUT</li>
-        </Link>
-        <Link style={footerStyle} to="/contact">
-          <li className="footers">CONTACT</li>
-        </Link>
-      </ul>
-    </footer>
+    <div className='footer-container'>
+      <div class='footer-links'>
+        <div className='footer-link-wrapper'>
+          <div class='footer-link-items'>
+            <h2>About Us</h2>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-};
+}
 
 export default Footer;
