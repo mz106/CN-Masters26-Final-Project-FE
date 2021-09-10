@@ -16,16 +16,16 @@ const Home = () => {
 
   const fetchProducts = async (event) => {
     try {
-      const obj = JSON.stringify({
+      const obj = JSON.stringify([{
         name: values.name,
         catagory: values.catagory,
         weight: values.weight,
         size: values.size,
         price: values.price,
         url: values.url
-      });
+      }]);
       console.log(obj)
-      const res = await fetch("http://localhost:80/http://localhost/admin", {
+      const res = await fetch("http://localhost/admin", {
         mode: "cors",
         method: "post",
         headers: { "Content-Type": "application/json" },

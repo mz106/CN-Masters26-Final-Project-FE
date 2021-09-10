@@ -4,8 +4,6 @@ import { useState } from "react";
 import Card from "./Card";
 import "./CardContainer.css";
 
-const API_URL = "http://localhost/admin";
-
 const CardContainer = () => {
 
     //this is a temp use state to get visuals
