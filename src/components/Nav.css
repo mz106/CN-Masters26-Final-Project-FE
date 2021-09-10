@@ -34,7 +34,6 @@
 a:hover {
   text-shadow: 0 5px 15px white;
   transition: all 0.2s ease-out;
-  filter: brightness(2);
 }
 .fa-bars {
   color: rgb(231, 48, 2);

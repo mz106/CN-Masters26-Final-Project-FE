@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const Home = () => {
             <h1 className="filter-title">Accessories</h1>
           </div>
         </Link>
+        <Footer />
       </div>
     </>
   );
