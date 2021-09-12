@@ -1,48 +1,31 @@
 import { useState, useEffect } from "react";
 import CardContainer from "./CardContainer";
+import { fetchProducts } from "./functions.js";
+import Card from "./Card";
+import { useQuery } from "react-query";
 
 const Weights = () => {
-
-  const [products, setProducts] = useState([]);
-
-  useEffect ( async () => {
-    const fetchProducts = async (event) => {
-      try {
-        
-        const res = await fetch("http://localhost/admin/", {
-          mode: "cors",
-          method: "get",
-          headers: { "Content-Type": "application/json" }
-        });
-        
-        const data = await res.json();
-        setProducts(data);
-        
-        for (let product of data) {
-          console.log(product.name)
-        }
-        
-        
-        
-      } catch (error) {
-        console.error(error);
-      }
-      console.log("fetchProducts end")
-      
-    };
-    
-    await fetchProducts();
-    
-  }, []);
+  
+  
+  const { data, status} = useQuery('products', fetchProducts);
   
   return (
     <>
-      {/* <div>
-        {products.map(product => {
-        return <h1>{product.name}</h1>
-        })}
-      </div> */}
-      <CardContainer products={products}/>
+      {status === 'loading' && (
+        <div>Loading data</div>
+      )}
+
+      {status === 'error' && (
+        <div>Error fetching data</div>
+      )}
+
+      {status === 'success' && (
+        <div>
+          
+          <CardContainer products={data}/>
+          
+        </div>
+      )} 
     </>
   );
 }

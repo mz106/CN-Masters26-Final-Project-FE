@@ -7,12 +7,17 @@ import Weights from "./components/ProductPages/Weights";
 import Accessories from "./components/ProductPages/Accessories";
 import Calisthenics from "./components/ProductPages/Calisthenics";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from 'react-query'
+
 import "./App.css";
 import Footer from "./components/Footer";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
     <>
+    <QueryClientProvider client={queryClient}>
       <Router>
         <Nav />
         <div className="container">
@@ -28,6 +33,7 @@ function App() {
         </div>
         <Footer/>
       </Router>
+      </QueryClientProvider>  
     </>
   );
 }
