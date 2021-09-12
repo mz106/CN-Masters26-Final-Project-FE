@@ -6,9 +6,9 @@ import "./Card.css";
 const Card =  ({ item }) => {
     return (
         <div className="container-card">
-            {/* <div className="card-img-container">
+            <div className="card-img-container">
                 <img src={item.url} className="card-img"/>
-            </div> */}
+            </div>
             <p>{item.name}</p>
             <p>£{item.price}</p>
         </div>
