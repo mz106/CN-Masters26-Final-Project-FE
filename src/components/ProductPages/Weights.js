@@ -7,10 +7,11 @@ import React from "react";
 
 const Weights = () => {
  
-  const [page, setPage] =useState(1);
+  const [page, setPage] =useState(3);
   const limit = 6;
-  const { data, status} = useQuery(['products', page, limit], () => fetchProducts(page, limit));
-  console.log(data)
+  const offset = 7;
+  const { data, status} = useQuery(['products', page, limit, offset], () => fetchProducts(page, limit, offset));
+  
   return (
     <>
       {status === 'loading' && (
@@ -22,16 +23,21 @@ const Weights = () => {
       )}
 
       {status === 'success' && (
+        <>
         <div>
-          
           <CardContainer products={data}/>
-          <button onClick={() => setPage(1)}>page 1</button>
-          <button onClick={() => setPage(2)}>page 2</button>
-          <button onClick={() => setPage(3)}>page 3</button>
         </div>
+        <button onClick={() => setPage(old => Math.max(old - 1, 1))} disabled={!data}>Prev</button>
+        <span> { page }</span>
+        <button onClick={() => setPage(old=> (!data || old === 3 ? old:old+1))} disabled={!data || data.next}>Next</button>
+        </>
       )} 
     </>
   );
 }
+
+// 1. const {data, status} = useQuery(['planets', page], ()=>fetchPlanet(page) );
+// 2. data.results.map(...)
+// 3. setPages(old=> (!data || !data.next ? old:old+1))}
 
 export default Weights;

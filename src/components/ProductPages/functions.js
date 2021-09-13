@@ -1,11 +1,11 @@
 
-const fetchProducts = async (page, limit) => {
+const fetchProducts = async (page, limit, offset) => {
     
       console.log("fetchProducts reached")
       // console.log(key, page, limit)
     try {
       
-      const res = await fetch(`http://localhost/admin?page=${page}&limit=${limit}`, {
+      const res = await fetch(`http://localhost/admin?page=${page}&limit=${limit}&offset=${offset}`, {
         mode: "cors",
         method: "get",
         headers: { "Content-Type": "application/json" }
