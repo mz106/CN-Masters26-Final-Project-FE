@@ -10,7 +10,7 @@ const CardContainer = ( { products } ) => {
     return (
         <>
         <div className="container-cardcontainer">
-            {products.map((item) => (<Card key={item.name} item={item}/>))}
+            {products.rows.map((item) => (<Card key={item.name} item={item}/>))}
         </div>
         </>
     );

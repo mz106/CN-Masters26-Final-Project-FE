@@ -7,11 +7,12 @@ import React from "react";
 
 const Weights = () => {
  
-  const [page, setPage] =useState(3);
+  const [page, setPage] =useState(1);
   const limit = 6;
-  const offset = 7;
-  const { data, status} = useQuery(['products', page, limit, offset], () => fetchProducts(page, limit, offset));
-  
+  const offset = 1;
+  const { data, status} = useQuery(['products', limit, offset], () => fetchProducts(limit, offset));
+  const getLastPage = () => Math.ceil((data.count || 0) / limit);
+  console.log(getLastPage())
   return (
     <>
       {status === 'loading' && (
@@ -27,9 +28,11 @@ const Weights = () => {
         <div>
           <CardContainer products={data}/>
         </div>
+        <button onClick={() => setPage(1)}>First</button>
         <button onClick={() => setPage(old => Math.max(old - 1, 1))} disabled={!data}>Prev</button>
-        <span> { page }</span>
+        <span> { page } of {getLastPage()}</span>
         <button onClick={() => setPage(old=> (!data || old === 3 ? old:old+1))} disabled={!data || data.next}>Next</button>
+        <button onClick={() => setPage(getLastPage())}>Last</button>
         </>
       )} 
     </>
