@@ -33,7 +33,7 @@ body {
   top: 40%;
   align-items: center;
 }
-.weights {
+.weightss {
   display: flex;
   position: relative;
 
@@ -43,7 +43,7 @@ body {
   text-align: center;
   flex-wrap: wrap;
 }
-.filter {
+.filters {
   background-color: rgba(255, 255, 255, 0.329);
   justify-content: center;
   height: 100%;
@@ -60,13 +60,13 @@ body {
   width: 80%;
   position: relative;
 }
-.weights > .filter {
+.weightss > .filters {
   flex-basis: 1 1 30%;
 }
-.weights > .content {
+.weightss > .contents {
   flex-basis: 1 1 70%;
 }
-.page-change {
+.page-changes {
   position: relative;
   background: silver;
   width: 100%;
