@@ -20,4 +20,4 @@ const fetchProducts = async (limit, offset) => {
 
   };
   
-  module.exports = fetchProducts;
+  export default fetchProducts;
