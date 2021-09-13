@@ -9,6 +9,7 @@ const Card =  ({ item }) => {
             <div className="card-img-container">
                 <img src={item.url} className="card-img"/>
             </div>
+            <p>{item.id}</p>
             <p>{item.name}</p>
             <p>£{item.price}</p>
         </div>

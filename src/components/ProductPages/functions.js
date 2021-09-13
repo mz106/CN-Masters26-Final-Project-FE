@@ -1,25 +1,23 @@
 
 const fetchProducts = async (limit, offset) => {
-    
-      console.log("fetchProducts reached")
-      // console.log(key, page, limit)
+      
     try {
       
       const res = await fetch(`http://localhost/admin?limit=${limit}&offset=${offset}`, {
         mode: "cors",
+        cache: 'no-cache',
         method: "get",
         headers: { "Content-Type": "application/json" }
       });
-      console.log("http hit", res)
+      
       const data = await res.json();
-      console.log(data)
+      console.log(data, res)
       return data;
       
     } catch (error) {
       console.error(error);
     }
-    console.log("fetchProducts end")
-    
+
   };
   
   module.exports = {
