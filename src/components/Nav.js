@@ -6,12 +6,14 @@ import { RiShoppingCart2Line } from "react-icons/ri";
 function Nav() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  const[navbar, setNabar]= useState(false);
+
   const navStyle = {
     color: "white",
     textDecoration: "none",
     listStyleType: "none",
     textTransform: "uppercase",
-    marginRight: "12em",
+    marginRight: "8em",
   };
   const CartStyle = {
     color: "orangered",
@@ -19,9 +21,19 @@ function Nav() {
     listStyleType: "none",
     fontSize: "32px",
   };
+  const changeNavbar =()=>{
+    if (window.scrollY >= 10){
+      setNabar(true);
+    }else{
+      setNabar(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeNavbar);
+
   return (
     <>
-      <nav className="Navbar">
+      <nav className={navbar ? 'navbar-active': 'navbar'}>
         <div className="navbar-container">
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
