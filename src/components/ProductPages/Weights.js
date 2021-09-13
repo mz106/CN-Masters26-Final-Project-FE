@@ -2,12 +2,12 @@ import React from "react";
 
 function Weights() {
   return (
-    <div className="weights">
-      <div className="filter">
-        <div className="filter-title">filter</div>
+    <div className="weightss">
+      <div className="filters">
+        <div className="filter-title">filters</div>
       </div>
-      <div className="content"> content page</div>
-      <div className="page-change"> page changer</div>
+      <div className="contents"> content pages</div>
+      <div className="page-changes"> page changers</div>
     </div>
   );
 }
