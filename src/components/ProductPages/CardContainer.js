@@ -2,7 +2,6 @@
 import { useState } from "react";
 
 import Card from "./Card";
-import CardSubContainer from "./CardSubContainer";
 import "./CardContainer.css";
 
 
@@ -11,8 +10,7 @@ const CardContainer = ( { products } ) => {
     return (
         <>
         <div className="container-cardcontainer">
-            {/* {products.rows.map((item) => (<Card key={item.name} item={item}/>))} */}
-            <CardSubContainer products={products}/>
+            {products.rows.map((item) => (<Card key={item.id} item={item}/>))}
         </div>
         </>
     );
