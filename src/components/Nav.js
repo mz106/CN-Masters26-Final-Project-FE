@@ -17,7 +17,7 @@ function Nav (){
   // };
 
   const changeNavbar =()=>{
-    if (window.scrollY >=80){
+    if (window.scrollY >=10){
       console.log("Navbar-Active")
       setNavbar(true);
     }else{
