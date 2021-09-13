@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import CardContainer from "./CardContainer";
-import { fetchProducts } from "./functions.js";
+import fetchProducts from "./functions.js";
 import React from "react";
 
 const Weights = () => {
