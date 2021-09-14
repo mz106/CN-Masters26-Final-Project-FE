@@ -23,7 +23,7 @@ function App() {
         <div className="container">
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/account" exact component={Account} />
+            <Route path="/cart" exact component={Cart} />
             <Route path="/login" exact component={Login} />
             <Route path="/signup" exact component={Signup} />
             <Route path="/weights" exact component={Weights} />
