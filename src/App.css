@@ -1,16 +1,17 @@
 body {
   margin: 0;
-  overflow: scroll;
+
   background-color: black;
 }
 .container {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  overflow: scroll;
-  background-color: rgb(32, 32, 32);
+  overflow: hidden;
+  background: rgb(218, 218, 218);
 }
 
 .nav-links {
@@ -28,7 +29,7 @@ body {
   position: fixed;
   text-align: center;
   justify-content: space-between;
-  text-shadow: 0 0 10px black;
+
   left: 5%;
   top: 40%;
   align-items: center;
@@ -36,7 +37,6 @@ body {
 .weightss {
   display: flex;
   position: relative;
-
   height: 80vh;
   width: 100vw;
   align-items: center;
@@ -77,4 +77,32 @@ body {
 
 p {
   color: black;
+}
+.pages-buttons {
+  display: flex;
+  position: relative;
+  top: -10%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 75%;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+button {
+  border: none;
+  border-radius: 8px;
+  width: 60px;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  border: 1px solid grey;
+  background: (rgb(255, 255, 255), rgb(114, 112, 112));
+  transition: ease 0.5s;
+  margin-top: 20px;
+}
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
