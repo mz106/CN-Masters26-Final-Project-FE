@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
-
   const [products, setProducts] = useState([]);
   const [values, setValues] = useState({
     name: "",
@@ -11,8 +10,7 @@ const Home = () => {
     weight: "",
     size: "",
     price: 0,
-    url: ""
-
+    url: "",
   });
 
   // const fetchProducts = async (event) => {
@@ -25,31 +23,35 @@ const Home = () => {
   //       price: values.price,
   //       url: values.url
   //     }]);
-      
+
   //     const res = await fetch("http://localhost/admin/getproducts", {
   //       mode: "cors",
   //       method: "post",
   //       headers: { "Content-Type": "application/json" },
   //       body: obj,
   //     });
-      
+
   //     const data = await res.json();
   //     setProducts(data);
-      
+
   //     for (let product of data) {
   //       console.log(product.name)
   //     }
-      
-      
-      
+
   //   } catch (error) {
   //     console.error(error);
   //   }
   //   console.log("fetchProducts end")
-    
+
   // };
   return (
     <>
+      <div className="top-content">
+        <div className="home-title">
+          TM<span className="three">3</span>
+        </div>
+        <div className="sub">Focus On Your Goals, The Rest Is Just Noise</div>
+      </div>
       <div className="home-container">
         <Link to="/weights">
           <div className="Weights-link">
@@ -67,7 +69,6 @@ const Home = () => {
           </div>
         </Link>
       </div>
-     
     </>
   );
 };

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 .container {
   display: flex;
   flex-direction: column;
@@ -5,21 +7,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
+  overflow: none;
 }
 .home-container {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   transform: translate(-50%, -50%);
-  min-height: 90vh;
-  max-height: 80vh;
-  top: 55%;
+  top: 50%;
   left: 25%;
   width: 50%;
   justify-content: space-around;
-  margin-bottom: 200px;
-  margin-top: 200px;
 }
 
 .Access-link,
@@ -30,14 +28,13 @@
   align-items: center;
   text-transform: uppercase;
   background: black;
-  margin: auto;
   position: relative;
-  width: 40vw;
-  height: 150px;
-  box-shadow: 0 0 22px black;
-  border-radius: 12px;
-  text-shadow: 0 0 30px black;
+  width: 35vw;
+  height: 50vh;
+  font-family: "Black Han Sans", sans-serif;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
   -webkit-text-stroke: black solid 1px;
+  font-size: 3rem;
 }
 .Access-link {
   background-image: url(./images/accessories.jpeg);
@@ -61,7 +58,8 @@
 a {
   text-decoration: none;
   text-shadow: 0 0 30px black;
-  -webkit-text-stroke: black solid 1px;
+  -webkit-text-stroke: rgb(122, 122, 122) solid 1px;
+  color: rgb(248, 248, 248);
 }
 .Access-link:hover,
 .Calis-link:hover,
@@ -71,8 +69,41 @@ a {
 }
 
 .filter-title {
-  color: rgb(255, 255, 255);
-  font-size: 42px;
+  color: rgb(241, 241, 241);
+  font-size: 60px;
   font-weight: 700;
-  text-shadow: 0 0 32px black;
+  transform: rotate(-45deg);
+  backdrop-filter: blur(2px);
+  display: flex;
+  position: relative;
+}
+
+.top-content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 29%;
+  left: 10%;
+}
+.home-title {
+  font-size: 6rem;
+  letter-spacing: 5px;
+  color: white;
+  text-shadow: 0 0 10px black;
+  font-family: "Black Han Sans", sans-serif;
+}
+.three {
+  text-transform: rotate(-45deg);
+  color: rgb(0, 0, 0);
+  font-size: 5rem;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+.sub {
+  position: relative;
+  text-transform: uppercase;
+  left: 46%;
+  bottom: 20%;
+  font-size: 4rem;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 2px 20px rgb(255, 255, 255);
+  font-family: "Prompt", sans-serif;
 }
