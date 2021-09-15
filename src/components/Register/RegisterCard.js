@@ -2,13 +2,16 @@ import React from "react";
 import validate from "./validateInfo";
 import UseRegister from "./UseRegister";
 import "./Register.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const RegisterSignup = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = UseRegister(
     submitForm,
     validate
   );
+
+    const history = useHistory();
+
   const signup = async (event) => {
     try {
       const obj = JSON.stringify({
@@ -25,6 +28,11 @@ const RegisterSignup = ({ submitForm }) => {
       });
       const data = await res.json();
       console.log({ data });
+      if (data.auth === true) {
+        localStorage.setItem("token", data.token);
+        history.push("/");
+        console.log(history)
+      } 
     } catch (error) {
       console.error(error);
     }

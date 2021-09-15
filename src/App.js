@@ -1,6 +1,6 @@
 import Nav from "./components/Nav";
 import Home from "./components/Home";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 import Signup from "./components/Register/Signup";
 import Cart from "./components/Cart";
 import Weights from "./components/ProductPages/Weights";
