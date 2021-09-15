@@ -3,7 +3,7 @@ import React from "react";
 
 import "./Card.css";
 
-const Card =  ({ item }) => {
+const Card =  ({ item, AddItems }) => {
     return (
         <div className="container-card">
             <div className="card-img-container">
@@ -12,7 +12,11 @@ const Card =  ({ item }) => {
             <p>{item.id}</p>
             <p>{item.name}</p>
             <p>£{item.price}</p>
+            <div>
+                <button onClick={()=>AddItems(item) }>Add to Cart </button>
+                </div>
         </div>
+        
     );
 };
 
