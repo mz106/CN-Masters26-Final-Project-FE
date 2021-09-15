@@ -7,10 +7,13 @@ import Weights from "./components/ProductPages/Weights";
 import Accessories from "./components/ProductPages/Accessories";
 import Calisthenics from "./components/ProductPages/Calisthenics";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useState } from "react";
 
 import "./App.css";
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <>
       <Router>
@@ -18,12 +21,42 @@ function App() {
           <Nav />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/cart" exact component={Cart} />
+            <Route
+              path="/cart"
+              exact
+              component={() => (
+                <Cart cartItems={cartItems} setCartItems={setCartItems} />
+              )}
+            />
             <Route path="/login" exact component={Login} />
             <Route path="/signup" exact component={Signup} />
-            <Route path="/weights" exact component={Weights} />
-            <Route path="/accessories" exact component={Accessories} />
-            <Route path="/calisthenics" exact component={Calisthenics} />
+            <Route
+              path="/weights"
+              exact
+              component={() => (
+                <Weights cartItems={cartItems} setCartItems={setCartItems} />
+              )}
+            />
+            <Route
+              path="/accessories"
+              exact
+              component={() => (
+                <Accessories
+                  cartItems={cartItems}
+                  setCartItems={setCartItems}
+                />
+              )}
+            />
+            <Route
+              path="/calisthenics"
+              exact
+              component={() => (
+                <Calisthenics
+                  cartItems={cartItems}
+                  setCartItems={setCartItems}
+                />
+              )}
+            />
           </Switch>
         </div>
       </Router>

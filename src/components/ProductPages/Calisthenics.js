@@ -1,6 +1,6 @@
 import React from "react";
 
-function Calisthenics() {
+function Calisthenics({ setCartItems }) {
   return <div>calisthenics</div>;
 }
 
