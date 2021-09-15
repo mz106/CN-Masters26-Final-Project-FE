@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: scroll;
   background: rgb(218, 218, 218);
 }
 
@@ -81,13 +81,15 @@ p {
 .pages-buttons {
   display: flex;
   position: relative;
-  top: -10%;
+  top: 50%;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   width: 75%;
   text-transform: uppercase;
   font-size: 20px;
+
+  padding-bottom: 40px;
 }
 button {
   border: none;
@@ -99,7 +101,7 @@ button {
   border: 1px solid grey;
   background: (rgb(255, 255, 255), rgb(114, 112, 112));
   transition: ease 0.5s;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 button:hover {
   background-color: black;

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 const useRegister = (callback, validate) => {
   const [values, setValues] = useState({
-    username: "",
     email: "",
     password: "",
   });

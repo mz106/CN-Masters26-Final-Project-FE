@@ -12,12 +12,11 @@ const RegisterSignup = ({ submitForm }) => {
   const signup = async (event) => {
     try {
       const obj = JSON.stringify({
-        name: values.username,
         email: values.email,
         password: values.password,
       });
 
-      const res = await fetch("http://localhost/user/register", {
+      const res = await fetch("http://localhost:5000/user/register", {
         mode: "cors",
         method: "post",
         headers: { "Content-Type": "application/json" },
@@ -37,18 +36,6 @@ const RegisterSignup = ({ submitForm }) => {
           <span className="CompanyName">Tm3</span> Cart by filling out the
           information below.
         </h1>
-        <div className="register-inputs">
-          <label className="register-label">Username</label>
-          <input
-            className="register-input"
-            type="text"
-            name="username"
-            placeholder="Enter your username"
-            value={values.username}
-            onChange={handleChange}
-          />
-          {errors.username && <p>{errors.username}</p>}
-        </div>
         <div className="register-inputs">
           <label className="register-label">Email</label>
           <input
@@ -78,7 +65,7 @@ const RegisterSignup = ({ submitForm }) => {
           Sign up
         </button>
         <span className="register-input-login">
-          Already have an Cart? <Link to="/login">LOGIN HERE </Link>
+          Already have an Account? <Link to="/login">LOGIN HERE </Link>
         </span>
       </form>
     </div>

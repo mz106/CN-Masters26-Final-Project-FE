@@ -8,6 +8,9 @@ const Card = ({ item }) => {
       <div className="card-img-container">
         <img src={item.url} className="card-img" />
       </div>
+      <div className="add-basket">
+        <h1 className="basket-btn">ADD TO BASKET</h1>
+      </div>
       <div className="info">
         <p className="Product-name">{item.name}</p>
         <p className="Product-weight">{item.weight}</p>
