@@ -7,8 +7,6 @@ const fetchProducts = async (limit, offset) => {
   try {
     const res = await fetch(
 
-      `http://localhost/admin?limit=${limit}&offset=${offset}`,
-      
       `${BASE_URL}/admin?limit=${limit}&offset=${offset}`,
 
       {
