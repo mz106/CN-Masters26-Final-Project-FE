@@ -24,7 +24,7 @@ function App() {
   
 
   const [cartItems, setCartItems] = useState([]);
-
+  console.log(cartItems, "cartItems app.js")
 
   return (
     <>
@@ -35,7 +35,7 @@ function App() {
             <Route path="/" exact component={Home} />
 
             <Route path="/cart">
-            { auth.auth_status ? <Cart  auth={auth} setAuth={setAuth}/> : <Redirect to="/login" /> }
+            { auth.auth_status ? <Cart  auth={auth} setAuth={setAuth} cartItems={cartItems} setCartItems={setCartItems}/> : <Redirect to="/login" /> }
             </Route>  
             <Route 
             path="/login"
