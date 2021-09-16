@@ -9,14 +9,8 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
             submitForm,
             validate
           );
-        
-        const [isData, setIsData] = useState([]);
-        const [counter, updateCounter] = useState(0);
+        console.log(auth)
 
-        const incrementCounter = () => {
-          updateCounter(counter + 1);
-      }
-        
         const login = async (e) => {
             
             try {
@@ -33,24 +27,13 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
               });
               const data = await res.json();
               console.log(data)
-              setIsData([...isData, {token: data.token}]);
-              console.log(isData, "this is the token isData array")
-              
-              return data
-            
-              
+              setAuth(true)
+              console.log(auth)
+          
             } catch (error) {
               console.error(error);
             }
-            
-            
           };
-
-          useEffect(() => {
-            setAuth(true)
-          }, [isData])
-
-        
 
           return (
             <div className="register-Content">
