@@ -57,7 +57,11 @@ const Weights = ({ cartItems, setCartItems }) => {
         <button
           onClick={() => {
             setPage(getLastPage());
-            setOffset(products.count - (products.count % limit));
+            if (products.count % limit === 0) {
+              setOffset(products.count - limit)
+            } else {
+              setOffset(products.count - (products.count % limit));
+            }  
           }}
         >
           Last
