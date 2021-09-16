@@ -1,12 +1,19 @@
 import React from "react";
-
 import "./Card.css";
 
-const Card = ({ item }) => {
+const Card = ({ item, cartItems, setCartItems }) => {
   return (
     <div className="container-card">
       <div className="card-img-container">
         <img src={item.url} className="card-img" />
+      </div>
+      <div className="add-basket">
+        <h1
+          className="basket-btn"
+          onClick={() => setCartItems([...cartItems, item])}
+        >
+          ADD TO BASKET
+        </h1>
       </div>
       <div className="info">
         <p className="Product-name">{item.name}</p>

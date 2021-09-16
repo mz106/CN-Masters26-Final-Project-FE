@@ -3,7 +3,9 @@ import CardContainer from "./CardContainer";
 import fetchProducts from "./functions.js";
 import React from "react";
 
-const Weights = () => {
+const Weights = ({ cartItems, setCartItems }) => {
+  console.log(cartItems);
+
   const [page, setPage] = useState(1);
   const [offset, setOffset] = useState(0);
   const [limit, setLimit] = useState(6);
@@ -19,7 +21,11 @@ const Weights = () => {
   return (
     <>
       <div>
-        <CardContainer products={products} />
+        <CardContainer
+          products={products}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+        />
       </div>
       <div className="pages-buttons">
         <button

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Accessories() {
+function Accessories({ setCartItems }) {
   return <div>Accessories</div>;
 }
 
