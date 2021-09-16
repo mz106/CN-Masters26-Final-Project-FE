@@ -48,7 +48,12 @@ const Weights = ({ cartItems, setCartItems }) => {
         </span>
         <button
           onClick={() => {
-            setPage((old) => (!products || old === 3 ? old : old + 1));
+            if (products.count % limit === 0) {
+            setPage((old) => (!products || old === (products.count / limit) ? old : old + 1));
+            setOffset(offset + (limit - 1));
+            } else {
+              setPage((old) => (!products || old === (products.count - (products.count % limit)) / limit ? old : old + 1))
+            }
             setOffset(offset + (limit - 1));
           }}
         >
