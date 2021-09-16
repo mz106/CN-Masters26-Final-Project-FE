@@ -81,7 +81,7 @@ p {
 .pages-buttons {
   display: flex;
   position: relative;
-  top: 50%;
+  top: 22%;
   justify-content: space-between;
   align-items: center;
   text-align: center;
@@ -98,7 +98,7 @@ button {
   height: 40px;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
-  margin-bottom: 10px;
+
   background: linear-gradient(grey, silver);
   transition: ease 0.5s;
 }

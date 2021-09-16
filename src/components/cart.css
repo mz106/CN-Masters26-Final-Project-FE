@@ -55,8 +55,10 @@ ol {
   position: relative;
   background-color: aliceblue;
   border-radius: 8px;
-  margin-bottom: 20px;
-  padding: 10px 10px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding: 12px 10px;
+  box-shadow: 0 0 10px white;
 }
 .cart-img-container {
   border-radius: 50%;
@@ -70,12 +72,14 @@ ol {
   border-radius: 50%;
 }
 .cart-info {
+  text-transform: uppercase;
   width: 50%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   font-size: 18px;
   font-weight: 600;
+
   justify-content: space-between;
 }
 .cart-container-right {
@@ -90,7 +94,15 @@ ol {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    black 0%-20%,
+    grey 23%-36%,
+    silver 39%-57%,
+    whitesmoke 65%-80%,
+    white 86%-100%
+  );
+
   color: white;
   border-radius: 8px;
 }
@@ -117,4 +129,5 @@ ol {
   position: absolute;
   top: 20%;
   left: 49%;
+  color: black;
 }

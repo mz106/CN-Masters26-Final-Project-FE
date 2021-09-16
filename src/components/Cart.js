@@ -1,14 +1,18 @@
-
 import "./cart.css";
 import { BsTrash } from "react-icons/bs";
-
 
 import { useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 
-
 function Cart({ cartItems, setCartItems, auth, setAuth }) {
-  console.log(cartItems, "on Cart.js")
+  console.log(cartItems, "on Cart.js");
+  const deleteItem = (id) => {
+    const remainder = cartItems.filter((item) => item.id !== id);
+    console.log("id=" + id);
+    console.log(remainder);
+    setCartItems(remainder);
+  };
+
   return (
     <>
       <div className="cart">
@@ -30,7 +34,7 @@ function Cart({ cartItems, setCartItems, auth, setAuth }) {
                     <p>{item.weight}</p>
                     <p>£{item.price}</p>
                   </div>
-                  <div className="remove-btn">
+                  <div className="remove-btn" onClick={() => deleteItem(id)}>
                     <BsTrash />
                   </div>
                 </div>
@@ -49,7 +53,6 @@ function Cart({ cartItems, setCartItems, auth, setAuth }) {
       </div>
     </>
   );
-
 }
 
 export default Cart;

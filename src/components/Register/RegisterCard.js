@@ -4,13 +4,15 @@ import UseRegister from "./UseRegister";
 import "./Register.css";
 import { Link, useHistory } from "react-router-dom";
 
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 const RegisterSignup = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = UseRegister(
     submitForm,
     validate
   );
 
-    const history = useHistory();
+  const history = useHistory();
 
   const signup = async (event) => {
     try {
@@ -19,7 +21,7 @@ const RegisterSignup = ({ submitForm }) => {
         password: values.password,
       });
 
-      const res = await fetch("http://localhost:5000/user/register", {
+      const res = await fetch(`${BASE_URL}/user/register`, {
         mode: "cors",
         method: "post",
         headers: { "Content-Type": "application/json" },
@@ -30,8 +32,8 @@ const RegisterSignup = ({ submitForm }) => {
       if (data.auth === true) {
         localStorage.setItem("token", data.token);
         history.push("/");
-        console.log(history)
-      } 
+        console.log(history);
+      }
     } catch (error) {
       console.error(error);
     }
