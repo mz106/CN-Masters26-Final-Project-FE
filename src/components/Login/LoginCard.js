@@ -4,18 +4,31 @@ import validate from "../Register/validateInfo";
 import UseLogin from "./UseLogin";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-const LoginCard = ({ submitForm, auth, setAuth }) => {
-  const { handleChange, handleSubmit, values, errors } = UseLogin(
-    submitForm,
-    validate
-  );
 
-  const login = async (e) => {
-    try {
-      const obj = JSON.stringify({
-        email: values.email,
-        password: values.password,
-      });
+
+const LoginCard = ( { submitForm, auth, setAuth }) => {
+        const { handleChange, handleSubmit, values, errors } = UseLogin(
+            submitForm,
+            validate
+          );
+      
+        const login = async (e) => {
+            
+            try {
+              const obj = JSON.stringify({
+                email: values.email,
+                password: values.password
+              });
+        
+              const res = await fetch(`${BASE_URL}/user/login`, {
+                mode: "cors",
+                method: "post",
+                headers: { "Content-Type": "application/json" },
+                body: obj,
+              });
+              const data = await res.json();
+              
+
 
       const res = await fetch(`${BASE_URL}/user/login`, {
         mode: "cors",
