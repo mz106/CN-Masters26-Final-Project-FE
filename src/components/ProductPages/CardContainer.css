@@ -4,7 +4,7 @@
   font-size: 3em;
   color: aliceblue;
   font-family: "Staatliches", cursive;
-  text-shadow: 0 0 25px black, 0 0 20px orangered;
+  text-shadow: 0 0 25px black, 0 0 20px rgb(255, 38, 0);
   justify-content: center;
   text-align: center;
   margin-top: 100px;
@@ -28,34 +28,31 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  top: 31%;
+  top: 22%;
   left: 0;
   min-height: 25vh;
-  width: 85vw;
+  width: 100vw;
   border-radius: 8px;
   margin-bottom: 40%;
-  background-image: url(../images/concrete.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: grayscale(1);
+  background: linear-gradient(black, rgb(136, 19, 4));
 }
 .second-img {
   height: 100%;
   width: 50%;
   border-radius: 10px;
   position: absolute;
-  top: 40%;
+  top: 70%;
   left: 25%;
   background-image: url(../images/push.jpeg);
   background-position: 10%;
   background-repeat: no-repeat;
   background-size: cover;
   filter: none;
+  box-shadow: 0 0 32px rgb(59, 59, 59);
 }
 .slogan {
   position: absolute;
-  top: -10%;
+  top: 20%;
   font-family: "Modak", cursive;
   text-transform: uppercase;
   letter-spacing: 4px;

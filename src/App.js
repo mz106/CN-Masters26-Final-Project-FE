@@ -10,6 +10,7 @@ import Calisthenics from "./components/ProductPages/Calisthenics";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
+
 import "./App.css";
 
 function App() {
@@ -28,8 +29,8 @@ function App() {
   return (
     <>
       <Router>
+        <Nav />
         <div className="container">
-          <Nav />
           <Switch>
             <Route path="/" exact component={Home} />
 
