@@ -6,14 +6,8 @@ import { BsTrash } from "react-icons/bs";
 import { useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 
-function Cart( { auth, setAuth }) {
 
-  
-
-  return <div>Cart</div>;
-
-
-function Cart({ cartItems, setCartItems }) {
+function Cart({ cartItems, setCartItems, auth, setAuth }) {
   return (
     <>
       <div className="cart">
