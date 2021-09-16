@@ -9,8 +9,7 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
             submitForm,
             validate
           );
-        console.log(auth)
-
+      
         const login = async (e) => {
             
             try {
@@ -26,9 +25,14 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
                 body: obj,
               });
               const data = await res.json();
-              console.log(data)
-              setAuth(true)
-              console.log(auth)
+              
+
+              setAuth({...auth, 
+                auth_status: data.auth_status,
+                email: data.email, 
+                token: data.secret_token
+              })
+              
           
             } catch (error) {
               console.error(error);

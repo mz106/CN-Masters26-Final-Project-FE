@@ -14,7 +14,11 @@ import "./App.css";
 
 function App() {
 
-  const [auth, setAuth] = useState(false); 
+  const [auth, setAuth] = useState({
+    auth_status: false,
+    email: "",
+    token: ""
+  }); 
   
   return (
     <>
@@ -24,7 +28,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/cart">
-            { auth ? <Cart  auth={auth} setAuth={setAuth}/> : <Redirect to="/login" /> }
+            { auth.auth_status ? <Cart  auth={auth} setAuth={setAuth}/> : <Redirect to="/login" /> }
             </Route>  
             <Route 
             path="/login"
