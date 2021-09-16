@@ -7,24 +7,25 @@ import Weights from "./components/ProductPages/Weights";
 import Accessories from "./components/ProductPages/Accessories";
 import Calisthenics from "./components/ProductPages/Calisthenics";
 
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { useState, useEffect } from 'react';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import "./App.css";
 
 function App() {
-
-
   const [auth, setAuth] = useState({
     auth_status: false,
     email: "",
-    token: ""
-  }); 
-  
+    token: "",
+  });
 
   const [cartItems, setCartItems] = useState([]);
-  console.log(cartItems, "cartItems app.js")
+  console.log(cartItems, "cartItems app.js");
 
   return (
     <>
@@ -35,24 +36,31 @@ function App() {
             <Route path="/" exact component={Home} />
 
             <Route path="/cart">
-            { auth.auth_status ? <Cart  auth={auth} setAuth={setAuth} cartItems={cartItems} setCartItems={setCartItems}/> : <Redirect to="/login" /> }
-            </Route>  
-            <Route 
-            path="/login"
-            exact
-            component={() => 
-              <Login auth={auth} setAuth={setAuth} />
-            }
+              {auth.auth_status ? (
+                <Cart
+                  auth={auth}
+                  setAuth={setAuth}
+                  cartItems={cartItems}
+                  setCartItems={setCartItems}
+                />
+              ) : (
+                <Redirect to="/login" />
+              )}
+            </Route>
+            <Route
+              path="/login"
+              exact
+              component={() => <Login auth={auth} setAuth={setAuth} />}
             />
 
-            <Route
+            {/* <Route
               path="/cart"
               exact
               component={() => (
                 <Cart cartItems={cartItems} setCartItems={setCartItems} />
               )}
             />
-            <Route path="/login" exact component={Login} />
+            <Route path="/login" exact component={Login} /> */}
 
             <Route path="/signup" exact component={Signup} />
             <Route
@@ -83,7 +91,6 @@ function App() {
               )}
             />
           </Switch>
-          
         </div>
       </Router>
     </>

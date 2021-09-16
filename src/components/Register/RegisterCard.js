@@ -12,7 +12,7 @@ const RegisterSignup = ({ submitForm }) => {
     validate
   );
 
-    const history = useHistory();
+  const history = useHistory();
 
   const signup = async (event) => {
     try {
@@ -32,8 +32,8 @@ const RegisterSignup = ({ submitForm }) => {
       if (data.auth === true) {
         localStorage.setItem("token", data.token);
         history.push("/");
-        console.log(history)
-      } 
+        console.log(history);
+      }
     } catch (error) {
       console.error(error);
     }
