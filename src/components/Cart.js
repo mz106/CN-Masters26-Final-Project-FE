@@ -1,5 +1,18 @@
+
 import "./cart.css";
 import { BsTrash } from "react-icons/bs";
+
+
+import { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
+
+function Cart( { auth, setAuth }) {
+
+  
+
+  return <div>Cart</div>;
+
+
 function Cart({ cartItems, setCartItems }) {
   return (
     <>
@@ -41,6 +54,7 @@ function Cart({ cartItems, setCartItems }) {
       </div>
     </>
   );
+
 }
 
 export default Cart;
