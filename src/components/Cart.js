@@ -1,6 +1,10 @@
-import React from "react";
+import { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
 
-function Cart() {
+function Cart( { auth, setAuth }) {
+
+  
+
   return <div>Cart</div>;
 }
 

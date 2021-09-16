@@ -1,21 +1,24 @@
 
-import { useState, useEffect } from 'react'
-import { useHistory } from 'react-router-dom';
+import { useState, useEffect, useContext } from 'react';
+import { RiDatabase2Fill } from 'react-icons/ri';
 import validate from '../Register/validateInfo';
 import UseLogin from './UseLogin';
 
-const LoginCard = ( { submitForm }) => {
+const LoginCard = ( { submitForm, auth, setAuth }) => {
         const { handleChange, handleSubmit, values, errors } = UseLogin(
             submitForm,
             validate
           );
+        
+        const [isData, setIsData] = useState([]);
+        const [counter, updateCounter] = useState(0);
 
-        const [isLoggedIn, setIsLoggedIn] = useState(false);
-        const [token, setToken] = useState("");
+        const incrementCounter = () => {
+          updateCounter(counter + 1);
+      }
         
-        let history = useHistory();
-        
-        const login = async (event) => {
+        const login = async (e) => {
+            
             try {
               const obj = JSON.stringify({
                 email: values.email,
@@ -30,33 +33,24 @@ const LoginCard = ( { submitForm }) => {
               });
               const data = await res.json();
               console.log(data)
-              if (data.auth === true) {
-                localStorage.setItem("token", data.token);
-                history.push("/");
-                console.log(history)
-              } 
+              setIsData([...isData, {token: data.token}]);
+              console.log(isData, "this is the token isData array")
               
               return data
-
+            
+              
             } catch (error) {
               console.error(error);
             }
             
+            
           };
-          
-          // useEffect(async () => {
-          //   const result = await login()
-          //       if (result.auth === true) {
-          //       setIsLoggedIn(true)
-          //       console.log(isLoggedIn)
-          //       setToken(result.token)
-          //       console.log(token) 
-          //   } else {
-          //       console.log("auth false")
-          //   }
-          // });
-          
-          
+
+          useEffect(() => {
+            setAuth(true)
+          }, [isData])
+
+        
 
           return (
             <div className="register-Content">

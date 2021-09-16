@@ -21,7 +21,6 @@ const useLogin = (callback, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
-    
   };
 
   useEffect(() => {

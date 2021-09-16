@@ -2,7 +2,7 @@ import { useState } from "react";
 import LoginCard from "./LoginCard";
 import LoginSuccess from "./LoginSuccess";
 
-const Login = () => {
+const Login =  ({ auth, setAuth }) => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -13,9 +13,9 @@ const Login = () => {
   return (
     <div>
       {!isSubmitted ? (
-          <LoginCard submitForm={submitForm} />
+          <LoginCard submitForm={submitForm} auth={auth} setAuth={setAuth}  />
         ) : (
-          <LoginSuccess />
+          <LoginSuccess  />
         )}
     </div>
   );  
