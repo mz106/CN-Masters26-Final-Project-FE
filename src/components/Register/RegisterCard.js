@@ -40,6 +40,7 @@ const RegisterSignup = ({ submitForm }) => {
   };
   return (
     <div className="register-Content">
+      <div className="register-img"></div>
       <form onSubmit={handleSubmit} className="form" noValidate>
         <h1>
           Get started with us today! Create your free{" "}
