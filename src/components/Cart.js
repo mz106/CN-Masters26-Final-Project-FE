@@ -1,3 +1,13 @@
+
+import { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
+
+function Cart( { auth, setAuth }) {
+
+  
+
+  return <div>Cart</div>;
+
 function Cart({ cartItems, setCartItems }) {
   return (
     <>
@@ -12,6 +22,7 @@ function Cart({ cartItems, setCartItems }) {
       </ol>
     </>
   );
+
 }
 
 export default Cart;
