@@ -8,11 +8,11 @@ const Weights = ({ cartItems, setCartItems }) => {
   const [offset, setOffset] = useState(0);
   const [limit, setLimit] = useState(6);
   const [products, setProducts] = useState({ count: 0, rows: [] });
-
+  const cat = "Weight";
   const getLastPage = () => Math.ceil((products?.count || 0) / limit);
 
   useEffect(
-    () => (async () => setProducts(await fetchProducts(limit, offset)))(),
+    () => (async () => setProducts(await fetchProducts(limit, offset, cat)))(),
     [offset]
   );
 
