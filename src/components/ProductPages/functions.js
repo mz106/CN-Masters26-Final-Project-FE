@@ -1,13 +1,13 @@
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-const fetchProducts = async (limit, offset) => {
+const fetchProducts = async (limit, offset, cat) => {
   console.log("fetch hit")
   console.trace()
   try {
     const res = await fetch(
 
-      `${BASE_URL}/admin?limit=${limit}&offset=${offset}`,
+      `${BASE_URL}/admin?limit=${limit}&offset=${offset}&cat=${cat}`,
 
       {
         mode: "cors",
