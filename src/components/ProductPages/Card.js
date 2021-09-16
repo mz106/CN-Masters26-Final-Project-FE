@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.css";
+import { RiShoppingCart2Line } from "react-icons/ri";
 
 const Card = ({ item, cartItems, setCartItems }) => {
   return (
@@ -12,7 +13,7 @@ const Card = ({ item, cartItems, setCartItems }) => {
           className="basket-btn"
           onClick={() => setCartItems([...cartItems, item])}
         >
-          ADD TO BASKET
+          <RiShoppingCart2Line />
         </h1>
       </div>
       <div className="info">

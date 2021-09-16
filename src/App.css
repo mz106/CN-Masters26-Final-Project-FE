@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: scroll;
-  background: rgb(218, 218, 218);
+  background: linear-gradient(rgba(0, 0, 0, 0.692), rgb(22, 22, 22));
 }
 
 .nav-links {
@@ -88,8 +88,8 @@ p {
   width: 75%;
   text-transform: uppercase;
   font-size: 20px;
-
-  padding-bottom: 40px;
+  color: white;
+  font-weight: 700;
 }
 button {
   border: none;
@@ -98,13 +98,12 @@ button {
   height: 40px;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
-  border: 1px solid grey;
-  background: (rgb(255, 255, 255), rgb(114, 112, 112));
+  margin-bottom: 10px;
+  background: linear-gradient(grey, silver);
   transition: ease 0.5s;
-  margin-top: 80px;
 }
 button:hover {
   background-color: black;
-  color: white;
+
   cursor: pointer;
 }

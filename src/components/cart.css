@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+.cart {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  width: 90vw;
+  height: 50vh;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 7%;
+  margin: auto;
+  box-shadow: 0 10px 22px black;
+  background-color: rgb(153, 153, 153);
+  border-radius: 10px;
+  box-shadow: 0 0 10px white;
+}
+ol {
+  height: 100%;
+  width: 100%;
+}
+
+.remove-btn {
+  color: orangered;
+  font-size: 3rem;
+  text-align: center;
+  align-items: center;
+}
+.remove-btn:hover {
+  cursor: pointer;
+}
+
+.cart-container-left {
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+}
+
+.cart-items {
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  height: 100px;
+  width: 95%;
+  position: relative;
+  background-color: aliceblue;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+}
+.cart-img-container {
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  height: 100%;
+  width: 100px;
+  margin-left: 10px;
+}
+.cart-img {
+  width: 100%;
+  border-radius: 50%;
+}
+.cart-info {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: space-between;
+}
+.cart-container-right {
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgb(0, 0, 0);
+  color: white;
+  border-radius: 8px;
+}
+.checkout-btn {
+  margin-top: 130%;
+  width: 300px;
+  height: 100px;
+  background: linear-gradient(yellow 20%, orange);
+  border: none;
+  border-radius: 10px;
+  font-size: 30px;
+  font-family: "Permanent Marker", cursive;
+  box-shadow: 0 5px 10px black;
+}
+.checkout-btn:hover {
+  width: 305px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgb(0, 0, 0);
+  color: black;
+  font-size: 35px;
+  transition: ease 1s;
+}
+.total-price {
+  position: absolute;
+  top: 20%;
+  left: 49%;
+}

@@ -13,36 +13,6 @@ const Home = () => {
     url: "",
   });
 
-  // const fetchProducts = async (event) => {
-  //   try {
-  //     const obj = JSON.stringify([{
-  //       name: values.name,
-  //       catagory: values.catagory,
-  //       weight: values.weight,
-  //       size: values.size,
-  //       price: values.price,
-  //       url: values.url
-  //     }]);
-
-  //     const res = await fetch("http://localhost/admin/getproducts", {
-  //       mode: "cors",
-  //       method: "post",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: obj,
-  //     });
-
-  //     const data = await res.json();
-  //     setProducts(data);
-
-  //     for (let product of data) {
-  //       console.log(product.name)
-  //     }
-
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  //   console.log("fetchProducts end")
-
   // };
   return (
     <>

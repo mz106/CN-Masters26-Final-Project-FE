@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 .container {
   display: flex;
   flex-direction: column;
@@ -35,6 +36,7 @@
   box-shadow: 0 0 10px rgb(0, 0, 0);
   -webkit-text-stroke: black solid 1px;
   font-size: 3rem;
+  filter: brightness(0.9);
 }
 .Access-link {
   background-image: url(./images/accessories.jpeg);
@@ -65,7 +67,7 @@ a {
 .Calis-link:hover,
 .Weights-link:hover {
   cursor: pointer;
-  filter: brightness(0.8);
+  filter: brightness(0.6);
 }
 
 .filter-title {
@@ -104,6 +106,6 @@ a {
   bottom: 20%;
   font-size: 4rem;
   color: rgb(0, 0, 0);
-  text-shadow: 0 2px 20px rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgb(255, 255, 255);
   font-family: "Prompt", sans-serif;
 }
