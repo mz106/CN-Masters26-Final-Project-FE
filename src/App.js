@@ -7,7 +7,6 @@ import Weights from "./components/ProductPages/Weights";
 import Accessories from "./components/ProductPages/Accessories";
 import Calisthenics from "./components/ProductPages/Calisthenics";
 
-
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
