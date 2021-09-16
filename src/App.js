@@ -11,9 +11,6 @@ import Calisthenics from "./components/ProductPages/Calisthenics";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useState } from "react";
-
 
 import "./App.css";
 
