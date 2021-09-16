@@ -4,6 +4,8 @@ import { RiDatabase2Fill } from 'react-icons/ri';
 import validate from '../Register/validateInfo';
 import UseLogin from './UseLogin';
 
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 const LoginCard = ( { submitForm, auth, setAuth }) => {
         const { handleChange, handleSubmit, values, errors } = UseLogin(
             submitForm,
@@ -18,7 +20,7 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
                 password: values.password
               });
         
-              const res = await fetch("http://localhost/user/login", {
+              const res = await fetch(`${BASE_URL}/user/login`, {
                 mode: "cors",
                 method: "post",
                 headers: { "Content-Type": "application/json" },
