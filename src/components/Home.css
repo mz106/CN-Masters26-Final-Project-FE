@@ -78,6 +78,7 @@ a {
   backdrop-filter: blur(2px);
   display: flex;
   position: relative;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
 .top-content {
@@ -107,6 +108,7 @@ a {
   bottom: 20%;
   font-size: 4rem;
   color: rgb(0, 0, 0);
-  text-shadow: 0 0 9px rgb(255, 255, 255);
+  -webkit-text-stroke: rgb(240, 246, 250) 1px;
+  text-shadow: 0 0 6px rgb(255, 255, 255);
   font-family: "Prompt", sans-serif;
 }
