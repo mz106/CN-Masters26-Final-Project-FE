@@ -20,7 +20,7 @@ const Card = ({ item, cartItems, setCartItems }) => {
       <div className="info">
         <p className="Product-name">{item.name}</p>
         <p className="Product-weight">{item.weight}</p>
-        <p className="Product-price">£{item.price}</p>
+        <p className="Product-price">£{item.id}</p>
       </div>
     </div>
   );

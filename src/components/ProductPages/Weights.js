@@ -36,8 +36,13 @@ const Weights = ({ cartItems, setCartItems }) => {
         </button>
         <button
           onClick={() => {
-            setPage((old) => Math.max(old - 1, 1));
-            setOffset(offset - (limit - 1));
+            if (page === 1) {
+              setPage(1)
+              setOffset(0)
+            } else {
+              setPage((old) => Math.max(old - 1));
+              setOffset(offset - (limit - 1));
+            }
           }}
         >
           prev
@@ -48,14 +53,11 @@ const Weights = ({ cartItems, setCartItems }) => {
         </span>
         <button
           onClick={() => {
-            if (products.count % limit === 0) {
-            setPage((old) => (!products || old === (products.count / limit) ? old : old + 1));
-            setOffset(offset + (limit - 1));
-            } else {
-              setPage((old) => (!products || old === (products.count - (products.count % limit)) / limit ? old : old + 1))
-            }
-            setOffset(offset + (limit - 1));
-          }}
+          //   
+            setPage((old) => (!products || old === ((products.count - (products.count % limit)) / limit) ? old : old + 1));
+            setOffset((page - 1) * limit + 1)
+          }
+        }
         >
           Next
         </button>
