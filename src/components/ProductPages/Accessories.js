@@ -1,4 +1,5 @@
 import React from "react";
+import "./Access.css";
 import { useState, useEffect } from "react";
 import CardContainer from "./CardContainer";
 import fetchProducts from "./functions.js";
@@ -19,6 +20,14 @@ const Accessories = ({ cartItems, setCartItems }) => {
   return (
     <>
       <div>
+        <div className="A-img-container">
+          {" "}
+          <h1 className="A-slogan">
+            TM<span className="three-sub">3</span> LOOK
+          </h1>
+          <div className="A-second-img"></div>
+        </div>
+
         <CardContainer
           products={products}
           cartItems={cartItems}
@@ -66,6 +75,5 @@ const Accessories = ({ cartItems, setCartItems }) => {
     </>
   );
 };
-
 
 export default Accessories;

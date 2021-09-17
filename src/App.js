@@ -25,7 +25,6 @@ function App() {
   });
 
   const [cartItems, setCartItems] = useState([]);
-  console.log(cartItems, "cartItems app.js");
 
   return (
     <>
