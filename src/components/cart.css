@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 .cart {
   position: relative;
   display: flex;
@@ -110,18 +111,19 @@ ol {
   margin-top: 130%;
   width: 300px;
   height: 100px;
-  background: linear-gradient(yellow 20%, orange);
+  background: linear-gradient(rgb(0, 204, 255) 20%, rgb(0, 60, 255));
   border: none;
   border-radius: 10px;
   font-size: 30px;
   font-family: "Permanent Marker", cursive;
   box-shadow: 0 5px 10px black;
+  color: white;
 }
 .checkout-btn:hover {
   width: 305px;
   cursor: pointer;
   box-shadow: 0 5px 20px rgb(0, 0, 0);
-  color: black;
+
   font-size: 35px;
   transition: ease 1s;
 }

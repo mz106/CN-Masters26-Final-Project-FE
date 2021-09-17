@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import CardContainer from "./CardContainer";
 import fetchProducts from "./functions.js";
+import "./Calisthenics.css";
 
 const Calisthenics = ({ cartItems, setCartItems }) => {
   const [page, setPage] = useState(1);
@@ -19,6 +20,11 @@ const Calisthenics = ({ cartItems, setCartItems }) => {
   return (
     <>
       <div>
+        <div className="C-img-container">
+          {" "}
+          <h1 className="C-slogan">Train Hard</h1>
+          <div className="C-second-img"></div>
+        </div>
         <CardContainer
           products={products}
           cartItems={cartItems}
@@ -57,7 +63,11 @@ const Calisthenics = ({ cartItems, setCartItems }) => {
         <button
           onClick={() => {
             setPage(getLastPage());
-            setOffset(products.count - (products.count % limit));
+            if (products.count % limit === 0) {
+              setOffset(products.count - limit)
+            } else {
+              setOffset(products.count - (products.count % limit));
+            }
           }}
         >
           Last

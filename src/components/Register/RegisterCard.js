@@ -40,43 +40,49 @@ const RegisterSignup = ({ submitForm }) => {
   };
   return (
     <div className="register-Content">
+      
+      <div className="register-img"></div>
       <form onSubmit={handleSubmit} className="form" noValidate>
-        <h1>
-          Get started with us today! Create your free{" "}
+        <h1 className="register-title">
+          Get started with us <span className="register-title-span">today</span>! Create your free{" "}
           <span className="CompanyName">Tm3</span> Cart by filling out the
           information below.
         </h1>
-        <div className="register-inputs">
-          <label className="register-label">Email</label>
-          <input
-            className="register-input"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            value={values.email}
-            onChange={handleChange}
-          />
-          {errors.email && <p>{errors.email}</p>}
-        </div>
-        <div className="register-inputs">
-          <label className="register-label">Password</label>
-          <input
-            className="register-input"
-            type="password"
-            name="password"
-            placeholder="Enter your password"
-            value={values.password}
-            onChange={handleChange}
-          />
-          {errors.password && <p>{errors.password}</p>}
-        </div>
+      
+       
+          <div className="register-inputs">
+            <label className="register-label">Email</label>
+            <input
+              className="register-input"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={values.email}
+              onChange={handleChange}
+            />
+            {errors.email && <p>{errors.email}</p>}
+          </div>
+        
+          <div className="register-inputs">
+            <label className="register-label">Password</label>
+            <input
+              className="register-input"
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              value={values.password}
+              onChange={handleChange}
+            />
+            {errors.password && <p>{errors.password}</p>}
+          </div>
 
-        <button className="register-input-btn" type="submit" onClick={signup}>
-          Sign up
-        </button>
-        <span className="register-input-login">
-          Already have an Account? <Link to="/login">LOGIN HERE </Link>
-        </span>
+          <button className="register-input-btn" type="submit" onClick={signup}>
+            Sign up
+          </button>
+          <span className="register-input-login">
+            Already have an Account? <Link to="/login" className="register-login-btn">LOGIN HERE </Link>
+          </span>
+        
       </form>
     </div>
   );

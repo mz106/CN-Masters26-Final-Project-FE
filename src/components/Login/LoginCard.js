@@ -4,6 +4,12 @@ import validate from "../Register/validateInfo";
 import UseLogin from "./UseLogin";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
+const LoginCard = ({ submitForm, auth, setAuth }) => {
+  const { handleChange, handleSubmit, values, errors } = UseLogin(
+    submitForm,
+    validate
+  );
+
 
 
 const LoginCard = ( { submitForm, auth, setAuth }) => {
@@ -29,6 +35,7 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
               const data = await res.json();
               
 
+
       setAuth({
         ...auth,
         auth_status: data.auth_status,
@@ -42,8 +49,9 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
 
   return (
     <div className="register-Content">
+      <div className="register-img-login"></div>
       <form onSubmit={handleSubmit} className="form" noValidate>
-        <h1>Login</h1>
+        <h1 className="register-title">Login</h1>
         <div className="register-inputs">
           <label className="register-label">Email</label>
           <input
@@ -69,7 +77,7 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
           {errors.password && <p>{errors.password}</p>}
         </div>
 
-        <button className="register-input-btn" type="submit" onClick={login}>
+        <button className="register-input-btn login-btn" type="submit" onClick={login}>
           Login
         </button>
       </form>

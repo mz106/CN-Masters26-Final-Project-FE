@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import CardContainer from "./CardContainer";
 import fetchProducts from "./functions.js";
 import React from "react";
+import "./Weights.css";
 
 const Weights = ({ cartItems, setCartItems }) => {
   const [page, setPage] = useState(1);
@@ -19,6 +20,12 @@ const Weights = ({ cartItems, setCartItems }) => {
   return (
     <>
       <div>
+        <div className="img-container">
+          {" "}
+          <h1 className="slogan">Lift heavy</h1>
+          <div className="second-img"></div>
+        </div>
+
         <CardContainer
           products={products}
           cartItems={cartItems}
@@ -34,10 +41,15 @@ const Weights = ({ cartItems, setCartItems }) => {
         >
           First
         </button>
-        <button
+        <button 
           onClick={() => {
-            setPage((old) => Math.max(old - 1, 1));
-            setOffset(offset - (limit - 1));
+            if (page === 1) {
+              setPage(1)
+              setOffset(0)
+            } else {
+              setPage((old) => Math.max(old - 1));
+              setOffset(offset - (limit - 1));
+            }
           }}
         >
           prev
@@ -48,16 +60,22 @@ const Weights = ({ cartItems, setCartItems }) => {
         </span>
         <button
           onClick={() => {
-            setPage((old) => (!products || old === 3 ? old : old + 1));
-            setOffset(offset + (limit - 1));
-          }}
+          //   
+            setPage((old) => (!products || old === ((products.count - (products.count % limit)) / limit) ? old : old + 1));
+            setOffset((page - 1) * limit + 1)
+          }
+        }
         >
           Next
         </button>
         <button
           onClick={() => {
             setPage(getLastPage());
-            setOffset(products.count - (products.count % limit));
+            if (products.count % limit === 0) {
+              setOffset(products.count - limit)
+            } else {
+              setOffset(products.count - (products.count % limit));
+            }  
           }}
         >
           Last

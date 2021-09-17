@@ -1,16 +1,13 @@
 import "./cart.css";
 import { BsTrash } from "react-icons/bs";
 
-import { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
-
 function Cart({ cartItems, setCartItems, auth, setAuth }) {
   console.log(cartItems, "on Cart.js");
 
   const deleteItem = (id) => {
     const remainder = cartItems.filter((item) => item.id !== id);
     console.log("id=" + id);
-    console.log(remainder);
+
     setCartItems(remainder);
   };
 

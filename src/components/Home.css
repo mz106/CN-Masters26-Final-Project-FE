@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
 .container {
   display: flex;
   flex-direction: column;
@@ -70,6 +71,11 @@ a {
   filter: brightness(0.6);
 }
 
+.pages-buttons {
+  font-family: 'Roboto', sans-serif;
+  color: red;
+}
+
 .filter-title {
   color: rgb(241, 241, 241);
   font-size: 60px;
@@ -95,9 +101,10 @@ a {
 }
 .three {
   text-transform: rotate(-45deg);
-  color: rgb(0, 0, 0);
+  color: rgb(0, 149, 248);
   font-size: 5rem;
-  text-shadow: 0 0 5px rgb(255, 255, 255);
+  text-shadow: 4px 0px 1px rgb(255, 255, 255);
+  -webkit-text-stroke: 1px black;
 }
 .sub {
   position: relative;
@@ -106,6 +113,6 @@ a {
   bottom: 20%;
   font-size: 4rem;
   color: rgb(0, 0, 0);
-  text-shadow: 0 0 5px rgb(255, 255, 255);
+  text-shadow: 0 0 9px rgb(255, 255, 255);
   font-family: "Prompt", sans-serif;
 }

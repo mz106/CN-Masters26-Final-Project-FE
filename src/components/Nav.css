@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200;1,400&family=Roboto:wght@100;300&display=swap');
+
 .navbar {
   /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(245, 241, 241) 100%); */
   background: black;
@@ -13,7 +16,7 @@
   left: 50%;
   width: 100vw;
   position: fixed;
-  box-shadow: 0 -20px 50px orangered;
+  box-shadow: 0 -20px 50px rgb(0, 162, 255);
   z-index: 999;
 }
 .navbar.active {
@@ -43,6 +46,7 @@
 }
 
 .nav-links {
+  font-family: 'Roboto', sans-serif; 
   color: #fff;
   display: flex;
   align-items: center;
@@ -51,7 +55,7 @@
   height: 100%;
 }
 .nav-links-cart {
-  color: rgb(255, 0, 0);
+  color: rgb(0, 162, 255);
   font-size: 3rem;
   display: flex;
   align-items: center;
