@@ -71,11 +71,6 @@ a {
   filter: brightness(0.6);
 }
 
-.pages-buttons {
-  font-family: 'Roboto', sans-serif;
-  color: red;
-}
-
 .filter-title {
   color: rgb(241, 241, 241);
   font-size: 60px;

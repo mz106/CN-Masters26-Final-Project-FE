@@ -28,12 +28,6 @@ const RegisterSignup = ({ submitForm }) => {
         body: obj,
       });
       const data = await res.json();
-      console.log({ data });
-      if (data.auth === true) {
-        localStorage.setItem("token", data.token);
-        history.push("/");
-        console.log(history);
-      }
     } catch (error) {
       console.error(error);
     }

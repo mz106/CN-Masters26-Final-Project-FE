@@ -2,8 +2,7 @@
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const fetchProducts = async (limit, offset, cat) => {
-  console.log("fetch hit")
-  console.trace()
+  
   try {
     const res = await fetch(
 
@@ -18,7 +17,6 @@ const fetchProducts = async (limit, offset, cat) => {
     );
       console.log("fetch done")
     const data = await res.json();
-    console.log(data, res);
     return data;
   } catch (error) {
     console.error(error);
