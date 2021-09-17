@@ -2,14 +2,6 @@ import validate from "../Register/validateInfo";
 import UseLogin from "./UseLogin";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-const LoginCard = ({ submitForm, auth, setAuth }) => {
-  const { handleChange, handleSubmit, values, errors } = UseLogin(
-    submitForm,
-    validate
-  );
-
-
-
 const LoginCard = ( { submitForm, auth, setAuth }) => {
         const { handleChange, handleSubmit, values, errors } = UseLogin(
             submitForm,
