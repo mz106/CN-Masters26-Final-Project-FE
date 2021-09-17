@@ -3,7 +3,7 @@ import "./Card.css";
 import { RiShoppingCart2Line } from "react-icons/ri";
 
 const Card = ({ item, cartItems, setCartItems }) => {
-  console.log(cartItems, "cartItems Card.js")
+  
   return (
     <div className="container-card">
       <div className="card-img-container">

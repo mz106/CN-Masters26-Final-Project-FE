@@ -36,6 +36,7 @@ const Accessories = ({ cartItems, setCartItems }) => {
       </div>
       <div className="pages-buttons">
         <button
+          className="page-button"
           onClick={() => {
             setPage(1);
             setOffset(0);
@@ -44,6 +45,7 @@ const Accessories = ({ cartItems, setCartItems }) => {
           First
         </button>
         <button
+          className="page-button"
           onClick={() => {
             setPage((old) => Math.max(old - 1, 1));
             setOffset(offset - (limit - 1));
@@ -56,6 +58,7 @@ const Accessories = ({ cartItems, setCartItems }) => {
           {page} of {getLastPage()}
         </span>
         <button
+          className="page-button"
           onClick={() => {
             setPage((old) => (!products || old === 3 ? old : old + 1));
             setOffset(offset + (limit - 1));
@@ -64,6 +67,7 @@ const Accessories = ({ cartItems, setCartItems }) => {
           Next
         </button>
         <button
+          className="page-button"
           onClick={() => {
             setPage(getLastPage());
             if (products.count % limit === 0) {
