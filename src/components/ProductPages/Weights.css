@@ -1,0 +1,43 @@
+.img-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 22%;
+  left: 0;
+  min-height: 25vh;
+  width: 100vw;
+  border-radius: 8px;
+  margin-bottom: 30%;
+  background: linear-gradient(
+    rgb(0, 0, 0),
+    black,
+    black,
+    rgba(236, 40, 6, 0.767)
+  );
+}
+.second-img {
+  height: 100%;
+  width: 50%;
+  border-radius: 10px;
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  background-image: url(../images/push.jpeg);
+  background-position: 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: none;
+  box-shadow: 0 0 32px rgb(59, 59, 59);
+}
+.slogan {
+  position: absolute;
+  top: 10%;
+  font-family: "Black Han Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  width: 100%;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1px black;
+}

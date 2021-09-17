@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import CardContainer from "./CardContainer";
 import fetchProducts from "./functions.js";
 import React from "react";
+import "./Weights.css";
 
 const Weights = ({ cartItems, setCartItems }) => {
   const [page, setPage] = useState(1);
@@ -19,6 +20,12 @@ const Weights = ({ cartItems, setCartItems }) => {
   return (
     <>
       <div>
+        <div className="img-container">
+          {" "}
+          <h1 className="slogan">Lift heavy</h1>
+          <div className="second-img"></div>
+        </div>
+
         <CardContainer
           products={products}
           cartItems={cartItems}

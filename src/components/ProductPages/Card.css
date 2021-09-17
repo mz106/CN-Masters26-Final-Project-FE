@@ -1,14 +1,14 @@
 .container-card {
-  height: 50%;
+  height: 60%;
   width: 30%;
   box-shadow: 0 8px 25px black;
-  border-radius: 8px;
+  border-radius: 5px;
   padding-bottom: 20px;
-
-  margin-top: 20px;
-  background-color: rgb(119, 119, 119);
+  color: black;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 0 15px rgba(134, 134, 134, 0.329);
   position: relative;
+  margin-bottom: 5px;
 }
 
 .card-img-container {
@@ -19,7 +19,7 @@
 img {
   height: 100%;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 5px;
   z-index: 3;
 }
 .weights-title {
@@ -53,7 +53,7 @@ img {
   font-weight: 600;
 
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .add-basket {

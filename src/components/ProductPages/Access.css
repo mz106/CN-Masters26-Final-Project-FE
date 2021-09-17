@@ -1,0 +1,50 @@
+.A-img-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 22%;
+  left: 0;
+  min-height: 25vh;
+  width: 100vw;
+  border-radius: 8px;
+  margin-bottom: 30%;
+  background: linear-gradient(
+    rgb(0, 0, 0),
+    black,
+    black,
+    rgba(15, 195, 6, 0.767)
+  );
+}
+.A-second-img {
+  height: 100%;
+  width: 50%;
+  border-radius: 10px;
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  background-image: url(../images/access.jpeg);
+  background-position: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: none;
+  box-shadow: 0 0 32px rgb(59, 59, 59);
+}
+.A-slogan {
+  position: absolute;
+  top: 10%;
+  font-family: "Black Han Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 23px rgb(0, 0, 0);
+  -webkit-text-stroke: 0.2px white;
+}
+.three-sub {
+  color: rgb(15, 195, 6);
+  font-size: 3rem;
+  -webkit-text-stroke: 0;
+}
