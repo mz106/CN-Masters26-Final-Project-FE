@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
 .container {
   display: flex;
   flex-direction: column;
@@ -68,6 +69,11 @@ a {
 .Weights-link:hover {
   cursor: pointer;
   filter: brightness(0.6);
+}
+
+.pages-buttons {
+  font-family: 'Roboto', sans-serif;
+  color: red;
 }
 
 .filter-title {

@@ -41,7 +41,7 @@ const Weights = ({ cartItems, setCartItems }) => {
         >
           First
         </button>
-        <button
+        <button 
           onClick={() => {
             if (page === 1) {
               setPage(1)

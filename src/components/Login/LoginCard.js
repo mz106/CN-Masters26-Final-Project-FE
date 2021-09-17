@@ -38,8 +38,9 @@ const LoginCard = ({ submitForm, auth, setAuth }) => {
 
   return (
     <div className="register-Content">
+      <div className="register-img-login"></div>
       <form onSubmit={handleSubmit} className="form" noValidate>
-        <h1>Login</h1>
+        <h1 className="register-title">Login</h1>
         <div className="register-inputs">
           <label className="register-label">Email</label>
           <input
@@ -65,7 +66,7 @@ const LoginCard = ({ submitForm, auth, setAuth }) => {
           {errors.password && <p>{errors.password}</p>}
         </div>
 
-        <button className="register-input-btn" type="submit" onClick={login}>
+        <button className="register-input-btn login-btn" type="submit" onClick={login}>
           Login
         </button>
       </form>
