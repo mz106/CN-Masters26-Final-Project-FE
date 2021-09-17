@@ -6,12 +6,18 @@ import { useEffect } from "react/cjs/react.development";
 
 function Cart({ cartItems, setCartItems, auth, setAuth }) {
   console.log(cartItems, "on Cart.js");
+
   const deleteItem = (id) => {
     const remainder = cartItems.filter((item) => item.id !== id);
     console.log("id=" + id);
     console.log(remainder);
     setCartItems(remainder);
   };
+
+  
+   const Total = cartItems.reduce((a, c) => a + c.price , 0); 
+ 
+
 
   return (
     <>
@@ -42,14 +48,17 @@ function Cart({ cartItems, setCartItems, auth, setAuth }) {
             })}
           </ol>{" "}
         </div>
+        {cartItems.length !== 0 && (
         <div className="cart-container-right">
           <div className="checkout">
             <div className="total">
-              <h1 className="total-price">'£0'</h1>
+            {""}
+              <h1 className="total-price">£{Total} </h1>
             </div>
             <button className="checkout-btn"> CHECKOUT </button>
           </div>
         </div>
+        )}
       </div>
     </>
   );

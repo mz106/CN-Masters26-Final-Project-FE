@@ -29,15 +29,6 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
               const data = await res.json();
               
 
-
-      const res = await fetch(`${BASE_URL}/user/login`, {
-        mode: "cors",
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        body: obj,
-      });
-      const data = await res.json();
-
       setAuth({
         ...auth,
         auth_status: data.auth_status,
