@@ -5,10 +5,9 @@ function Cart({ cartItems, setCartItems, auth, setAuth }) {
   console.log(cartItems, "on Cart.js");
 
   const deleteItem = (id) => {
-    const remainder = cartItems.filter((item) => item.id !== id);
-    console.log("id=" + id);
-
-    setCartItems(remainder);
+    if (id) {
+      setCartItems([...cartItems.slice(0, id), ...cartItems.slice(id)]);
+    } else setCartItems(cartItems.slice(1));
   };
 
   

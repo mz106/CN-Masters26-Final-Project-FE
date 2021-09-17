@@ -1,5 +1,3 @@
-import { useState, useEffect, useContext } from "react";
-import { RiDatabase2Fill } from "react-icons/ri";
 import validate from "../Register/validateInfo";
 import UseLogin from "./UseLogin";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
@@ -77,7 +75,11 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
           {errors.password && <p>{errors.password}</p>}
         </div>
 
-        <button className="register-input-btn login-btn" type="submit" onClick={login}>
+        <button
+          className="register-input-btn login-btn"
+          type="submit"
+          onClick={login}
+        >
           Login
         </button>
       </form>

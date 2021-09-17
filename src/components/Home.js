@@ -1,17 +1,16 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-  const [values, setValues] = useState({
-    name: "",
-    catagory: "",
-    weight: "",
-    size: "",
-    price: 0,
-    url: "",
-  });
+  // const [products, setProducts] = useState([]);
+  // const [values, setValues] = useState({
+  //   name: "",
+  //   catagory: "",
+  //   weight: "",
+  //   size: "",
+  //   price: 0,
+  //   url: "",
+  // });
 
   // };
   return (
