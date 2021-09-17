@@ -34,7 +34,7 @@ const Weights = ({ cartItems, setCartItems }) => {
         >
           First
         </button>
-        <button
+        <button 
           onClick={() => {
             setPage((old) => Math.max(old - 1, 1));
             setOffset(offset - (limit - 1));
