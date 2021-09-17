@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const RegisterSuccess = () => {
   const logoStyle = {
-    color: "black",
+    color: "red",
     textDecoration: "none",
     fontSize: "80px",
     marginRight: "200px",
@@ -12,11 +12,14 @@ const RegisterSuccess = () => {
     justifyContent: "flex-end",
   };
   return (
-    <div className="register-Content">
+    <div className="register-success-content">
       <Link className="close-btn" style={logoStyle} to="/">
         ×
       </Link>
-      <h1>Welocme to Team 3!</h1>
+      <div classname="success-title-container">
+        <h1 className="register-success-title">Welcome to Team 3!</h1>
+      </div>
+      <div className="success-img"></div>
     </div>
   );
 };
